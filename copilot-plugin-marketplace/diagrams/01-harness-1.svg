@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="490" viewBox="0 0 860 490" font-family="'Noto Sans CJK JP','Noto Sans JP',sans-serif">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+    </marker>
+  </defs>
+  <rect width="860" height="490" fill="#fff"/>
+
+  <!-- 開発者 -->
+  <rect x="30" y="195" width="130" height="70" rx="10" fill="#fdf2fb" stroke="#c45cb3" stroke-width="2"/>
+  <text x="95" y="237" font-size="20" text-anchor="middle" fill="#222">開発者</text>
+  <line x1="162" y1="218" x2="228" y2="218" stroke="#333" stroke-width="2" marker-end="url(#ah)"/>
+  <text x="195" y="208" font-size="15" text-anchor="middle" fill="#333">指示</text>
+  <line x1="228" y1="244" x2="162" y2="244" stroke="#333" stroke-width="2" marker-end="url(#ah)"/>
+  <text x="195" y="266" font-size="15" text-anchor="middle" fill="#333">結果</text>
+
+  <!-- ハーネス（輪） -->
+  <circle cx="430" cy="240" r="200" fill="#e8f7f4" stroke="#2a9d8f" stroke-width="2.5"/>
+  <text x="430" y="92" font-size="22" font-weight="bold" text-anchor="middle" fill="#1d6f65">ハーネス</text>
+  <text x="430" y="118" font-size="15" text-anchor="middle" fill="#1d6f65">ツールを実行して結果を返す</text>
+
+  <!-- モデル（中心） -->
+  <circle cx="430" cy="225" r="80" fill="#fff4e6" stroke="#e8890c" stroke-width="2.5"/>
+  <text x="430" y="222" font-size="22" font-weight="bold" text-anchor="middle" fill="#9a5600">モデル</text>
+  <text x="430" y="248" font-size="15" text-anchor="middle" fill="#9a5600">使うツールを決める</text>
+
+  <!-- 繰り返しの矢印 -->
+  <path d="M 360 375 Q 430 410 500 375" fill="none" stroke="#2a9d8f" stroke-width="2.5" marker-end="url(#ah)"/>
+  <text x="430" y="350" font-size="15" text-anchor="middle" fill="#1d6f65">タスクが終わるまで繰り返す</text>
+
+  <!-- ツール -->
+  <line x1="632" y1="218" x2="672" y2="218" stroke="#333" stroke-width="2" marker-end="url(#ah)"/>
+  <text x="652" y="208" font-size="15" text-anchor="middle" fill="#333">実行</text>
+  <line x1="672" y1="244" x2="632" y2="244" stroke="#333" stroke-width="2" marker-end="url(#ah)"/>
+  <text x="652" y="266" font-size="15" text-anchor="middle" fill="#333">結果</text>
+  <rect x="674" y="185" width="160" height="92" rx="10" fill="#eef8fd" stroke="#2b8ac4" stroke-width="2"/>
+  <text x="754" y="222" font-size="20" text-anchor="middle" fill="#222">ツール</text>
+  <text x="754" y="250" font-size="13" text-anchor="middle" fill="#444">ファイル操作・</text>
+  <text x="754" y="268" font-size="13" text-anchor="middle" fill="#444">コマンド実行など</text>
+</svg>
