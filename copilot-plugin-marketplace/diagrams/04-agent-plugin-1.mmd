@@ -1,0 +1,11 @@
+flowchart TB
+    P["agent plugin（plugin.json）"]
+    P --> STD
+    P --> CP
+    subgraph STD["オープン標準（他ツールと共通）"]
+        S["skills/"]
+        M["mcp.json"]
+    end
+    subgraph CP["com.github.copilot/（Copilot だけが読む）"]
+        X["Copilot 固有の<br/>コンポーネント"]
+    end
