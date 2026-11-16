@@ -1,23 +1,25 @@
-# 3. GitHub Copilot 活用のメリット
+# 3. GitHub Copilot の活用範囲の拡大
 
-## 3.1 SVN でも使える機能と GitHub が必要な機能
+Copilot は今の環境でもエディタで使っています。GitHub に移行すると、GitHub 上で動く Copilot の機能も使えるようになります。
 
-| 機能 | SVN のまま | GitHub 移行後 |
+## 3.1 今の環境と移行後で使える機能の比較
+
+| 機能 | 今の環境（SVN） | 移行後（GitHub） |
 | --- | --- | --- |
 | エディタでのコード補完、チャット | 使える | 使える |
-| Issue を割り当てて実装させる | 使えない | 使える |
-| プルリクエストをレビューさせる | 使えない | 使える |
+| Issue を割り当てて実装を任せる | 使えない | 使える |
+| プルリクエストのレビュー | 使えない | 使える |
 
-## 3.2 Issue を Copilot に割り当てて実装させる
+## 3.2 Issue を割り当てて実装を任せられる
 
 - Issue を Copilot に割り当てると、Copilot が実装してプルリクエストを作成する
 - マージするかどうかは、開発者がレビューして判断する
 
-![Copilot に実装させる流れ](img/03-copilot-1.png)
+![Copilot に実装を任せる流れ](img/03-copilot-1.png)
 
 出典：[GitHub Copilot エージェントについて（GitHub Docs）](https://docs.github.com/ja/copilot/concepts/agent-capabilities/about-agents/about-github-copilot-agents)
 
-## 3.3 プルリクエストを Copilot にレビューさせる
+## 3.3 プルリクエストのレビューに使える
 
 - プルリクエストのレビュー担当に Copilot を指定すると、変更内容へのコメントが付く
 - 人のレビューの前に、見落としを減らせる
