@@ -1,0 +1,9 @@
+flowchart LR
+    subgraph GIT["Git・GitHub"]
+        direction LR
+        G1["pull"] --> G2["ブランチ作成"] --> G3["編集"] --> G4["commit<br/>（手元に記録）"] --> G5["push<br/>（GitHub に反映）"] --> G6["プルリクエスト<br/>（レビュー後にマージ）"]
+    end
+    subgraph SVN["SVN"]
+        direction LR
+        S1["update"] --> S2["編集"] --> S3["commit<br/>（サーバーに反映）"]
+    end

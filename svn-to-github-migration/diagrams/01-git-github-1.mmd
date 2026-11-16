@@ -1,0 +1,13 @@
+flowchart TB
+    subgraph GIT["Git（分散型）"]
+        direction TB
+        GH[("GitHub<br/>共有リポジトリ")]
+        GA["開発者 A<br/>ローカルリポジトリ<br/>（全履歴あり）"] -->|push| GH
+        GB["開発者 B<br/>ローカルリポジトリ<br/>（全履歴あり）"] -->|push| GH
+    end
+    subgraph SVN["SVN（集中型）"]
+        direction TB
+        SS[("SVN サーバー<br/>履歴はここだけ")]
+        SA["開発者 A<br/>作業コピー"] -->|commit| SS
+        SB["開発者 B<br/>作業コピー"] -->|commit| SS
+    end
