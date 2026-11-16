@@ -8,5 +8,4 @@ mkdocs serve    # プレビュー
 mkdocs build    # site/ に HTML を出力
 ```
 
-図は `diagrams/*.mmd`（Mermaid）を PNG に変換して `docs/img/` に置いています。
-変換時は日本語フォントを指定した `mermaid-config.json` を使います（`mmdc -c mermaid-config.json -i <mmd> -o <png> -s 2 -b white`）。
+図は Markdown の中に Mermaid で直接書いています。

@@ -18,7 +18,10 @@ def page_name(title: str, is_home: bool) -> str:
 def main(src_dir: str, wiki_dir: str) -> None:
     src = Path(src_dir)
     wiki = Path(wiki_dir)
-    conf = yaml.safe_load((src / "mkdocs.yml").read_text(encoding="utf-8"))
+    # mkdocs.yml contains !!python/name tags (e.g. the mermaid fence); ignore them.
+    loader = type("Loader", (yaml.SafeLoader,), {})
+    loader.add_multi_constructor("tag:yaml.org,2002:python/", lambda l, s, n: None)
+    conf = yaml.load((src / "mkdocs.yml").read_text(encoding="utf-8"), Loader=loader)
     nav = [next(iter(item.items())) for item in conf["nav"]]
 
     # Remove previously generated content (keep .git)

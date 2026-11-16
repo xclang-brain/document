@@ -6,7 +6,11 @@
 - **MCP サーバー**：CLI や API などをラップした「ツール」を提供する側
 - **MCP クライアント**：サーバーからツール一覧を取得し、ツールを呼び出す側（GitHub Copilot）
 
-![03-mcp-1](img/03-mcp-1.png)
+```mermaid
+flowchart LR
+    C["GitHub Copilot<br/>（MCP クライアント）"] <-->|"JSON-RPC<br/>tools/list：ツール一覧の取得<br/>tools/call：ツールの呼び出し<br/>（接続方式：stdio または Streamable HTTP）"| S["MCP サーバー"]
+    S --> T["ツールの中身<br/>CLI・API・ファイル操作など"]
+```
 
 出典：[MCP Architecture overview](https://modelcontextprotocol.io/docs/learn/architecture) ／ [Overview of MCP（GitHub Docs）](https://docs.github.com/en/copilot/concepts/customizations/mcp)
 
