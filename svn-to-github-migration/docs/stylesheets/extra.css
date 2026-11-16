@@ -1,0 +1,29 @@
+/* 日本語の本文を読みやすくする */
+.md-typeset {
+  line-height: 1.8;
+}
+
+/* 見出しを本文と同じ濃さにし、太さで階層を示す */
+.md-typeset h1 {
+  color: var(--md-default-fg-color);
+  font-weight: 700;
+}
+.md-typeset h2 {
+  font-weight: 700;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  padding-bottom: .2em;
+}
+
+/* 表の文字を本文と同じ大きさ・濃さにする */
+.md-typeset table:not([class]) {
+  font-size: .8rem;
+}
+.md-typeset table:not([class]) td,
+.md-typeset table:not([class]) th {
+  color: var(--md-default-fg-color);
+}
+
+/* Mermaid の図の文字を小さくしすぎない */
+.md-typeset .mermaid {
+  text-align: center;
+}
