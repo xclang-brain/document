@@ -9,7 +9,7 @@
 ## 1.2 GitHub とは
 
 - Git のリポジトリを置いて共有するサービス
-- プルリクエスト、イシュー、GitHub Actions、GitHub Copilot など、開発を支える機能がある
+- プルリクエスト、Issue、GitHub Actions、GitHub Copilot など、開発を支える機能がある
 
 出典：[GitHub とは（GitHub Docs）](https://docs.github.com/ja/get-started/start-your-journey/what-is-github)
 
@@ -23,4 +23,6 @@ SVN は履歴をサーバーだけが持ちます。Git は各開発者が全履
 
 SVN の commit はすぐにサーバーへ反映されます。Git の commit は手元に記録するだけで、push して初めて GitHub に反映されます。GitHub では、作業用のブランチで変更し、プルリクエストでレビューを受けてからマージします。
 
-![SVN と Git の作業の流れの違い](img/01-git-github-2.png)
+![SVN の作業の流れ](img/01-git-github-2.png)
+
+![Git・GitHub の作業の流れ](img/01-git-github-3.png)
