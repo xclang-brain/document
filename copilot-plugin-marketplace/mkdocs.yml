@@ -12,7 +12,11 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - tables
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.highlight
 nav:
   - 概要: index.md

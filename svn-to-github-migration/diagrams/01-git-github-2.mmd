@@ -1,9 +1,0 @@
-flowchart LR
-    subgraph SV["サーバー（SVN）"]
-        R[("SVN リポジトリ")]
-    end
-    subgraph PC["ローカル PC"]
-        W["作業コピー<br/>② 編集"]
-    end
-    R -->|"① update"| W
-    W -->|"③ commit"| R

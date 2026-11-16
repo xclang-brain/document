@@ -24,6 +24,18 @@
 - 2026 年 8 月公開のオープン標準
 - 標準化されているのは `skills/` と `mcp.json`。Copilot 固有のコンポーネントは `com.github.copilot/` に配置する
 
-![04-agent-plugin-1](img/04-agent-plugin-1.png)
+```mermaid
+flowchart TB
+    P["agent plugin（plugin.json）"]
+    P --> STD
+    P --> CP
+    subgraph STD["オープン標準（他ツールと共通）"]
+        S["skills/"]
+        M["mcp.json"]
+    end
+    subgraph CP["com.github.copilot/（Copilot だけが読む）"]
+        X["Copilot 固有の<br/>コンポーネント"]
+    end
+```
 
 出典：[Agent Plugins 1.0 in VS Code, Copilot CLI, and the Copilot app（GitHub Changelog）](https://github.blog/changelog/2026-08-12-agent-plugins-1-0-in-vs-code-copilot-cli-and-the-copilot-app) ／ [About plugins（GitHub Docs）](https://docs.github.com/en/copilot/concepts/agents/about-plugins)

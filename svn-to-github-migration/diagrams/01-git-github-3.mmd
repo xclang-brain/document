@@ -1,9 +1,0 @@
-flowchart LR
-    subgraph GH["サーバー（GitHub）"]
-        R[("リモートリポジトリ<br/>⑥ プルリクエストで<br/>レビューしてマージ")]
-    end
-    subgraph PC["ローカル PC"]
-        L["ローカルリポジトリ<br/>② ブランチ作成<br/>③ 編集<br/>④ commit（手元に記録）"]
-    end
-    R -->|"① pull"| L
-    L -->|"⑤ push"| R

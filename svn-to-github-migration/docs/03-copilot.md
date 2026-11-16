@@ -15,7 +15,12 @@ Copilot は今の環境でもエディタで使っています。GitHub に移�
 - Issue を Copilot に割り当てると、Copilot が実装してプルリクエストを作成する
 - マージするかどうかは、開発者がレビューして判断する
 
-![Copilot に実装を任せる流れ](img/03-copilot-1.png)
+```mermaid
+flowchart LR
+    A["開発者が<br/>Issue を<br/>Copilot に割り当てる"] --> B["Copilot が実装し<br/>プルリクエストを作成する"] --> C["開発者が<br/>レビューする"]
+    C -->|修正依頼| B
+    C -->|承認| D["マージする"]
+```
 
 出典：[GitHub Copilot エージェントについて（GitHub Docs）](https://docs.github.com/ja/copilot/concepts/agent-capabilities/about-agents/about-github-copilot-agents)
 

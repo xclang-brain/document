@@ -56,7 +56,11 @@ description: Guide for debugging failing GitHub Actions workflows.   # 何をす
 
 ## 2.7 custom instructions との違い
 
-![02-agent-skill-1](img/02-agent-skill-1.png)
+```mermaid
+flowchart LR
+    A["① 発見<br/>name / description だけ読む"] -->|依頼と合致| B["② 指示<br/>SKILL.md 本文を読む"]
+    B -->|本文から参照| C["③ リソース<br/>scripts / references / assets"]
+```
 
 | | custom instructions | agent skill |
 |---|---|---|

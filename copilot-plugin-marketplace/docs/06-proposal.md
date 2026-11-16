@@ -14,4 +14,10 @@
 | 散在している | 1 つのリポジトリで一元管理できる |
 | 共有の仕組みがない | marketplace を登録すれば、全員が検索・インストールできる |
 
-![06-proposal-1](img/06-proposal-1.png)
+```mermaid
+flowchart LR
+    D1[開発者 A] -->|登録| MP[社内 marketplace]
+    D2[開発者 B] -->|登録| MP
+    MP -->|インストール| U1[利用者]
+    MP -->|インストール| U2[利用者]
+```
