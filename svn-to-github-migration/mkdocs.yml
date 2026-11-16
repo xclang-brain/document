@@ -22,6 +22,6 @@ nav:
   - 概要: index.md
   - 1. Git と GitHub の概要: 01-git-github.md
   - 2. Git・GitHub のメリット: 02-merits.md
-  - 3. GitHub Copilot の活用範囲の拡大: 03-copilot.md
+  - 3. AI 活用の幅の拡大: 03-ai.md
   - 4. 移行のコストと懸念: 04-cost-concerns.md
   - 5. 移行の進め方: 05-plan.md
