@@ -1,9 +1,9 @@
-flowchart TB
-    subgraph GIT["Git・GitHub"]
-        direction TB
-        G1["pull"] --> G2["ブランチ作成"] --> G3["編集"] --> G4["commit<br/>（手元に記録）"] --> G5["push<br/>（GitHub に反映）"] --> G6["プルリクエスト<br/>（レビュー後にマージ）"]
+flowchart LR
+    subgraph SV["サーバー（SVN）"]
+        R[("SVN リポジトリ")]
     end
-    subgraph SVN["SVN"]
-        direction TB
-        S1["update"] --> S2["編集"] --> S3["commit<br/>（サーバーに反映）"]
+    subgraph PC["ローカル PC"]
+        W["作業コピー<br/>② 編集"]
     end
+    R -->|"① update"| W
+    W -->|"③ commit"| R

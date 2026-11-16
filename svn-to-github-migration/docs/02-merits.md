@@ -12,9 +12,9 @@
 
 出典：[Pull Request（GitHub Docs）](https://docs.github.com/ja/pull-requests/reference/pull-requests)
 
-## 2.3 イシューと変更を紐づけて管理できる
+## 2.3 Issue と変更を紐づけて管理できる
 
-- 課題（イシュー）と、それを解決したプルリクエストを紐づけられる
+- Issue（課題）と、それを解決したプルリクエストを紐づけられる
 - 「なぜこの変更をしたか」を後から追える
 
 出典：[プルリクエストを課題にリンクする（GitHub Docs）](https://docs.github.com/ja/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue)

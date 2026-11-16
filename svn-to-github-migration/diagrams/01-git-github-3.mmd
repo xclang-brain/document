@@ -1,0 +1,10 @@
+flowchart LR
+    subgraph GH["サーバー（GitHub）"]
+        B[("作業ブランチ")] -->|"⑥ プルリクエスト<br/>（レビュー後にマージ）"| M[("main ブランチ")]
+    end
+    subgraph PC["ローカル PC"]
+        W["作業ファイル<br/>③ 編集"] -->|"④ commit"| L[("ローカルリポジトリ")]
+        L -->|"② ブランチ作成"| W
+    end
+    M -->|"① pull"| L
+    L -->|"⑤ push"| B
