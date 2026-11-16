@@ -1,0 +1,23 @@
+site_name: GitHub 移行説明資料
+use_directory_urls: false
+theme:
+  name: material
+  language: ja
+  features:
+    - navigation.sections
+    - navigation.footer
+plugins: []
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - pymdownx.superfences
+  - pymdownx.highlight
+nav:
+  - 概要: index.md
+  - 1. Git と GitHub の概要: 01-git-github.md
+  - 2. Git・GitHub のメリット: 02-merits.md
+  - 3. GitHub Copilot 活用のメリット: 03-copilot.md
+  - 4. 移行のコストと懸念: 04-cost-concerns.md
+  - 5. 移行の進め方: 05-plan.md

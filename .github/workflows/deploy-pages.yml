@@ -1,11 +1,12 @@
-name: Deploy copilot-plugin-marketplace to GitHub Pages
+name: Deploy docs to GitHub Pages
 
 on:
   push:
     branches: [main]
     paths:
       - "copilot-plugin-marketplace/**"
-      - ".github/workflows/deploy-copilot-plugin-marketplace.yml"
+      - "svn-to-github-migration/**"
+      - ".github/workflows/deploy-pages.yml"
   workflow_dispatch:
 
 permissions:
@@ -20,20 +21,19 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: copilot-plugin-marketplace
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-python@v6
         with:
           python-version: "3.x"
       - run: pip install mkdocs-material
-      - run: mkdocs build --strict
+      # 既存の URL を変えないよう、情報共有会の資料はサイトのトップに置く
+      - run: mkdocs build --strict -f copilot-plugin-marketplace/mkdocs.yml -d "$GITHUB_WORKSPACE/_site"
+      - run: mkdocs build --strict -f svn-to-github-migration/mkdocs.yml -d "$GITHUB_WORKSPACE/_site/svn-to-github-migration"
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v5
         with:
-          path: copilot-plugin-marketplace/site
+          path: _site
 
   deploy:
     needs: build
