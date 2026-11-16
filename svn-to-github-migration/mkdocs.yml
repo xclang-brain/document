@@ -9,7 +9,6 @@ theme:
   features:
     - navigation.sections
     - navigation.footer
-    - toc.integrate
 plugins: []
 extra_css:
   - stylesheets/extra.css

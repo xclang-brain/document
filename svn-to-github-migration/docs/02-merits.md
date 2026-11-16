@@ -1,71 +1,40 @@
 # 2. Git・GitHub のメリット
 
-<div class="grid cards" markdown>
-
--   :material-source-branch:{ .lg .middle } **ブランチの作成とマージが容易になる**
-
-    ---
-
-    作業途中の変更を手元に置いたまま、作業ごとに分けて進められる
-
--   :material-source-pull:{ .lg .middle } **プルリクエストでレビューが記録に残る**
-
-    ---
-
-    レビューの指摘と承認が、変更内容と一緒に残る
-
--   :material-link-variant:{ .lg .middle } **Issue と変更を紐づけて管理できる**
-
-    ---
-
-    なぜその変更をしたのかを、後から追える
-
--   :material-cog-play:{ .lg .middle } **ビルドやテストを自動化できる**
-
-    ---
-
-    テストに通らない変更は、マージできないようにできる
-
--   :material-earth:{ .lg .middle } **業界標準である**
-
-    ---
-
-    開発者の **93%** が Git を使っている
-
--   :material-robot-outline:{ .lg .middle } **AI 活用の幅が広がる**
-
-    ---
-
-    Issue からの実装やプルリクエストのレビューを AI に任せられる
-
-</div>
+| メリット | 概要 |
+| --- | --- |
+| :material-link-variant: Issue と変更を紐づけて管理できる | なぜその変更をしたのかを後から追える |
+| :material-source-branch: 作業ごとにブランチを分けやすい | 作業途中の変更を、他の人に影響させずに残せる |
+| :material-source-pull: プルリクエストでレビューが記録に残る | 指摘と承認が、変更内容と一緒に残る |
+| :material-cog-play: ビルドやテストを自動化できる | テストに通らない変更をマージできないようにできる |
+| :material-earth: 業界標準である | 開発者の **93%** が Git を使っている |
+| :material-robot-outline: AI 活用の幅が広がる | Issue からの実装やプルリクエストのレビューを AI に任せられる |
 
 2.1〜2.4 は、GitHub での開発の流れの各段階に当たります。
 
 ```mermaid
 flowchart LR
-    A["Issue"] --> B["ブランチ"] --> D["プルリクエスト"] --> E["自動テスト"] --> F["レビュー"] --> G["マージ"]
+    A["Issue<br/>（2.1）"] --> B["ブランチ<br/>（2.2）"] --> C["プルリクエスト<br/>（2.3）"] --> D["自動テスト<br/>（2.4）"] --> E["マージ"]
 ```
 
-## 2.1 ブランチの作成とマージが容易になる
+## 2.1 Issue と変更を紐づけて管理できる
 
-- **SVN**：ブランチはサーバー上に作る。作業途中の変更も、commit するとサーバーに反映される
-- **Git・GitHub**：ブランチを手元ですぐに作れる。作業途中の変更は手元で commit し、終わってから共有できる
+- **SVN**：課題管理は、Redmine などの別ツールと連携して行う
+- **Git・GitHub**：Issue とプルリクエストが同じ場所にあり、マージすると Issue が自動で閉じる[^1]
 
-## 2.2 プルリクエストでレビューが記録に残る
+## 2.2 作業ごとにブランチを分けやすい
 
-- **SVN**：レビューの仕組みがないため、レビューは別の手段で行い、記録も別に管理する
-- **Git・GitHub**：変更内容、指摘、承認がプルリクエストにまとめて残る。承認されるまでマージできないようにも設定できる[^1]
+- **SVN**：ブランチはサーバー上に作る。commit するとすぐサーバーに反映される
+- **Git・GitHub**：ブランチを手元で作って切り替えられる。作業途中の変更も手元で commit できる
 
-## 2.3 Issue と変更を紐づけて管理できる
+## 2.3 プルリクエストでレビューが記録に残る
 
-- **SVN**：課題を管理する機能がないため、課題と変更の対応は手作業で管理する
-- **Git・GitHub**：Issue（課題）と、それを解決したプルリクエストを紐づけられる[^2]
+- **SVN**：レビューには別のツールや手段が必要で、記録も変更とは別の場所に残る
+- **Git・GitHub**：変更内容、指摘、承認がプルリクエストにまとめて残る[^2]
 
 ## 2.4 ビルドやテストを自動化できる
 
-- **SVN**：自動化には、別途 CI サーバーを用意する必要がある
-- **Git・GitHub**：GitHub Actions で、push やプルリクエストのたびにビルドとテストを実行できる。結果はプルリクエストに表示され、失敗した変更はマージできないようにできる[^3]
+- **SVN**：Jenkins などの CI サーバーを別に用意して連携する
+- **Git・GitHub**：GitHub Actions を使え、結果がプルリクエストに表示される[^3]
 
 ## 2.5 業界標準である
 
@@ -74,19 +43,19 @@ flowchart LR
 
 ## 2.6 AI 活用の幅が広がる
 
-Copilot は今もエディタで使っています。移行すると、GitHub 上で AI に任せられる作業が増えます。
+Copilot は今もエディタで使っています。移行すると、GitHub 上で AI に作業を任せられるようになります。
 
-| AI に任せられる作業 | SVN | Git・GitHub |
+| GitHub 上で AI に任せられる作業 | 今の環境 | 移行後 |
 | --- | :---: | :---: |
-| 複数の作業を並行して任せる | :material-minus: 一部 | :material-check: |
-| Issue から実装を任せる | :material-close: | :material-check: |
-| プルリクエストのレビューと修正を任せる | :material-close: | :material-check: |
+| Issue を割り当てて、実装させる | × | ○ |
+| プルリクエストをレビュー・修正させる | × | ○ |
+| 複数の作業を並行して進めさせる | △（準備が必要） | ○ |
 
 - GitHub 上のプルリクエストの **40% 以上**が、AI の作成した下書きをもとにしている（2026年9月時点）[^5]
 - 主要な AI ツール（Copilot、Claude Code、Codex など）の新機能は、ブランチとプルリクエストでの作業を前提にしている[^6]
 
-[^1]: [Pull Request（GitHub Docs）](https://docs.github.com/ja/pull-requests/reference/pull-requests)
-[^2]: [プルリクエストを課題にリンクする（GitHub Docs）](https://docs.github.com/ja/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue)
+[^1]: [プルリクエストを課題にリンクする（GitHub Docs）](https://docs.github.com/ja/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue)
+[^2]: [Pull Request（GitHub Docs）](https://docs.github.com/ja/pull-requests/reference/pull-requests)
 [^3]: [GitHub Actions について（GitHub Docs）](https://docs.github.com/ja/actions/get-started/understand-github-actions)
 [^4]: [Beyond Git: The other version control systems developers use（Stack Overflow Blog）](https://stackoverflow.blog/2023/01/09/beyond-git-the-other-version-control-systems-developers-use)
 [^5]: [Octoverse 2026（GitHub Blog）](https://github.blog/news-insights/octoverse/octoverse-commits-pushes-reach-new-highs-in-2026-as-developers-build-with-agents/)
