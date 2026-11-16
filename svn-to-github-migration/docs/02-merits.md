@@ -51,10 +51,8 @@ Copilot は今もエディタで使っています。移行すると、GitHub �
 | Issue を割り当てて、実装させる | × | ○ |
 | プルリクエストをレビュー・修正させる | × | ○ |
 | 複数の作業を並行して進めさせる | △（準備が必要） | ○ |
-| リポジトリの指示・skill に沿って作業させる | × | ○ |
 
 - 主要な AI ツール（Copilot、Claude Code、Codex など）の新機能は、ブランチとプルリクエストでの作業を前提にしている[^8]
-- エディタで使っている指示や skill は、GitHub 上の AI もそのまま使う[^9]
 
 [^1]: [プルリクエストを課題にリンクする（GitHub Docs）](https://docs.github.com/ja/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue)
 [^2]: [Using Branches（Version Control with Subversion）](https://svnbook.red-bean.com/en/1.7/svn.branchmerge.using.html)
@@ -64,4 +62,3 @@ Copilot は今もエディタで使っています。移行すると、GitHub �
 [^6]: [GitHub Actions について（GitHub Docs）](https://docs.github.com/ja/actions/get-started/understand-github-actions)
 [^7]: [Beyond Git: The other version control systems developers use（Stack Overflow Blog）](https://stackoverflow.blog/2023/01/09/beyond-git-the-other-version-control-systems-developers-use)
 [^8]: [GitHub Copilot エージェントについて（GitHub Docs）](https://docs.github.com/ja/copilot/concepts/agent-capabilities/about-agents/about-github-copilot-agents) ／ [Claude Code on the web](https://code.claude.com/docs/en/claude-code-on-the-web) ／ [Codex: Git worktrees](https://learn.chatgpt.com/docs/environments/git-worktrees)
-[^9]: [Custom instructions support（GitHub Docs）](https://docs.github.com/en/copilot/reference/custom-instructions-support) ／ [About agent skills（GitHub Docs）](https://docs.github.com/en/copilot/concepts/agents/about-agent-skills)
